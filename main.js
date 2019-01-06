@@ -84,3 +84,26 @@ new Vue({
     }
 
 });
+
+
+
+new Vue({
+    el: '#app11',
+    data: {
+        title: 'Hello 10',
+        status: ''
+       
+    },
+    methods: {
+        setupTitle(){
+            this.title = 'this.newTitle';
+        }
+    },
+    watch: {
+        title(value) {
+            this.status = 'changed';
+        }
+    }
+    
+
+});
