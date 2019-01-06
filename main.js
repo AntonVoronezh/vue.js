@@ -1,7 +1,8 @@
 new Vue({
     el: '#app',
     data: {
-        title: 'Hello'
+        title: 'Hello',
+        href: 'google.com'
     },
     methods: {
         handleChange(event) {

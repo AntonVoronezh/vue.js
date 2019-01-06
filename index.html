@@ -13,7 +13,8 @@
 
     <div id="app">
         <input type="text" v-on="{input:handleChange, focus:handleChange}">
-        {{ title }}
+        <h2>{{ title }}</h2>
+        <a v-bind:href="href">{{ href }}</a>
     </div>
 
     <script src="main.js"></script>
