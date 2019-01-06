@@ -8,7 +8,7 @@
     <title>Document</title>
 
     <style>
-    [v-cloak] {
+        [v-cloak] {
         display: none;
     }
     </style>
@@ -21,6 +21,8 @@
         <!-- <input type="text" v-on="{input:handleChange, focus:handleChange}"> -->
         <!-- <input type="text" v-on:input="handleChange"> -->
         <input type="text" @input="handleChange">
+        <button @click="titleChange('one')">change</button>
+        <button @click="titleChange('two')">change</button>
         <h2>interpol - {{ title }}</h2>
         <h2 v-pre>pre - {{ title }}</h2>
         <h2 v-text="title"></h2>
@@ -29,6 +31,12 @@
         <a :href="href">{{ href }}</a>
         <h2>---- {{ link }}</h2>
         <h2 v-html="link">++++</h2>
+        <!-- 8 -->
+        <button @click="titleChange8('one', $event)">change</button>
+        <button @click="titleChange8('two', $event)">change</button>
+        <h2>{{ example8.title }} координата - {{example8.coordX}}</h2>
+
+
 
     </div>
 
