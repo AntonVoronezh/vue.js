@@ -24,3 +24,26 @@ new Vue({
         }
     }
 });
+
+new Vue({
+    el: '#app9',
+    
+    methods: {
+        handleOuter(event) {
+            console.log('outer');
+            
+        },
+        handleInner(event) {
+            console.log('inner');
+            
+        },
+        handleClick(event) {
+            console.log('click');
+            
+        },
+        handleKey(event){
+            console.log(event.target.value);
+            
+        }
+    }
+});

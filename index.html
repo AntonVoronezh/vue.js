@@ -36,9 +36,30 @@
         <button @click="titleChange8('two', $event)">change</button>
         <h2>{{ example8.title }} координата - {{example8.coordX}}</h2>
 
-
-
     </div>
+
+    <!-- 9 -->
+    <div id="app9">
+        <div class="outer" @click="handleOuter"> Outer
+                <!-- <div class="outer" @click.self="handleOuter"> Outer -->
+        <!-- <div class="outer" @click.capture="handleOuter"> Outer -->
+
+            <div class="inner" @click="handleInner">Inner</div>
+            <!-- <div class="inner" @click.stop="handleInner">Inner</div> -->
+            <!-- <div class="inner" @click.once="handleInner">Inner</div> -->
+
+            <a href="">link</a>
+            <!-- <a href="" @click.prevent>link</a> -->
+            <!-- <a href=""  @click.left="handleClick">link</a> -->
+            <!-- <a href=""  @click.right="handleClick">link</a> -->
+            <!-- <a href=""  @click.middle="handleClick">link</a> -->
+
+            <input type="text" @keydown="handleKey">
+
+        </div>
+    </div>
+
+
 
 
 
