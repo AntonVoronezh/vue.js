@@ -12,24 +12,27 @@
         display: none;
     }
     </style>
-    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
 
-    <div id="app" v-cloak>
-        <input type="text" v-on="{input:handleChange, focus:handleChange}">
+    <div id="app">
+        <!-- <input type="text" v-on="{input:handleChange, focus:handleChange}"> -->
+        <!-- <input type="text" v-on:input="handleChange"> -->
+        <input type="text" @input="handleChange">
         <h2>interpol - {{ title }}</h2>
         <h2 v-pre>pre - {{ title }}</h2>
         <h2 v-text="title"></h2>
         <h2 v-text="title" v-once></h2>
-        <a v-bind:href="href">{{ href }}</a>
+        <!-- <a v-bind:href="href">{{ href }}</a> -->
+        <a :href="href">{{ href }}</a>
         <h2>---- {{ link }}</h2>
         <h2 v-html="link">++++</h2>
 
     </div>
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 
     <script src="main.js"></script>
 </body>
