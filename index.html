@@ -12,7 +12,7 @@
 <body>
 
     <div id="app">
-        <input type="text" v-on:input="handleChange">
+        <input type="text" v-on="{input:handleChange, focus:handleChange}">
         {{ title }}
     </div>
 
