@@ -41,8 +41,8 @@
     <!-- 9 -->
     <div id="app9">
         <div class="outer" @click="handleOuter"> Outer
-                <!-- <div class="outer" @click.self="handleOuter"> Outer -->
-        <!-- <div class="outer" @click.capture="handleOuter"> Outer -->
+            <!-- <div class="outer" @click.self="handleOuter"> Outer -->
+            <!-- <div class="outer" @click.capture="handleOuter"> Outer -->
 
             <div class="inner" @click="handleInner">Inner</div>
             <!-- <div class="inner" @click.stop="handleInner">Inner</div> -->
@@ -60,6 +60,19 @@
     </div>
 
 
+    <!-- 10 -->
+<hr>
+    <div id="app10">
+        <div>{{title}}</div>
+        <div>{{3 > 2}}</div>
+        <div>{{title.length}}</div>
+        <div>{{title.split('').reverse().join('')}}</div>
+        <div>{{reverseTitle(title)}}</div>
+        <div>правильно - {{reversedTitle}}</div>
+        <div>{{title}}</div>
+        <button @click="setupTitle">setupTitle</button>
+
+    </div>
 
 
 

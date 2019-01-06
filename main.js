@@ -47,3 +47,40 @@ new Vue({
         }
     }
 });
+
+new Vue({
+    el: '#app10',
+    data: {
+        title: 'Hello 10',
+       
+    },
+    methods: {
+        reverseTitle(title) {
+            return title.split('').reverse().join('');
+            
+        },
+        setupTitle(){
+            // this.title = this.newTitle;
+            this.title = 'vaaaaaaa';
+            this.title = this.newTitle;
+        }
+    },
+    computed: {
+        reversedTitle(){
+            return this.title.split('').reverse().join('');
+        },
+        newTitle(){
+            return 'new Title';
+        },
+        newTitleGetSet:{
+            get() {
+                return 'new Title Get & Set'
+            },
+            set(value) {
+                console.log('computed ---> ', value);
+                this.title = 'setted value'
+            }
+        }
+    }
+
+});
