@@ -6,16 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+    [v-cloak] {
+        display: none;
+    }
+    </style>
+    
 </head>
 
 <body>
 
-    <div id="app">
+    <div id="app" v-cloak>
         <input type="text" v-on="{input:handleChange, focus:handleChange}">
-        <h2>{{ title }}</h2>
+        <h2>interpol - {{ title }}</h2>
+        <h2 v-pre>pre - {{ title }}</h2>
+        <h2 v-text="title"></h2>
+        <h2 v-text="title" v-once></h2>
         <a v-bind:href="href">{{ href }}</a>
+        <h2>---- {{ link }}</h2>
+        <h2 v-html="link">++++</h2>
+
     </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <script src="main.js"></script>
 </body>
