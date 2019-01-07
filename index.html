@@ -9,7 +9,11 @@
 
     <style>
         [v-cloak] {
-        display: none;
+        display: none;}
+
+        .active {
+            background-color: #ccc;
+        }
     }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -61,7 +65,7 @@
 
 
     <!-- 10 -->
-<hr>
+    <hr>
     <div id="app10">
         <div>{{title}}</div>
         <div>{{3 > 2}}</div>
@@ -73,14 +77,128 @@
         <button @click="setupTitle">setupTitle</button>
 
     </div>
-<hr>
-<!-- 11 -->
-<div id="app11">
+    <hr>
+
+
+
+    <!-- 11 -->
+    <div id="app11">
         <div>{{title}}</div>
         <div>{{status}}</div>
         <button @click="setupTitle">setupTitle</button>
 
     </div>
+    <hr>
+
+
+
+    <!-- 12 -->
+    <div id="app12">
+        <!-- <div :class="changed ? 'active' : ''">{{title}}</div> -->
+        <!-- <div class="static" :class="{active:changed}">{{title}}</div> -->
+        <!-- <div class="static" :class="['activeClass', 'errorClass']">{{title}}</div> -->
+        <div class="static" :class="[{active:changed}, 'errorClass']">{{title}}</div>
+        <button @click="setupTitle">вывести</button>
+
+    </div>
+    <hr>
+
+
+
+    <!-- 13 -->
+    <div id="app13">
+        <!-- <div :style="stylessss">{{title}}</div> -->
+        <div :style="{color:fontNewColor, fontSize:fontNewSize}">{{title}}</div>
+    </div>
+    <hr>
+
+
+
+    <!-- 14 -->
+    <div id="app14">
+        <div v-if="show">Заголовок</div>
+        <!-- <div v-show="show">Заголовок</div> -->
+        <div v-else>fffffffffffff</div>
+        <button @click="change">изменить</button>
+    </div>
+
+
+
+    <hr>
+
+
+
+    <!-- 15 -->
+    <div id="app15">
+        <ul>
+            <!-- <li v-for="elem in arr">{{elem}}</li> -->
+            <!-- <li v-for="(elem, index) in arr">{{index}}</li> -->
+
+            <!-- <li v-for="value in obj">{{elem}}</li> -->
+            <!-- <li v-for="(value, key) in obj">{{value}} -> {{key}}</li> -->
+
+            <!-- <li v-for="member in arrObj">{{member.name}} -> {{member.sal}}</li> -->
+
+            <!-- <li 
+                    v-for="member in arrObj"
+                    @click="handle"
+                    v-if="member.sal === 200"
+               
+               >{{member.name}}</li> -->
+
+            <li v-for="i in 5">{{i}}</li>
+        </ul>
+    </div>
+
+
+
+    <hr>
+
+
+
+    <!-- 16 -->
+    <div id="app16">
+        <div>{{title}}</div>
+    </div>
+    <hr>
+
+
+
+    <!-- 17 -->
+    <div id="app17">
+        <hello> </hello>
+        <hello></hello>
+    </div>
+
+
+    <!-- 18 -->
+    <div id="app18">
+        <hello18> </hello18>
+        <hello18></hello18>
+    </div>
+
+    <script type="text/x-template" id="hello18">
+    <div>
+        <test></test>
+       <h3 @click="handle"><i>{{title}}</i></h3>
+
+    </div>
+</script>
+
+    <!-- 19 -->
+    <div id="app19">
+        <hello19> </hello19>
+    </div>
+
+    <script type="text/x-template" id="hello19">
+            <div>
+                
+               <h3 @click="handle"><i>{{title}}</i></h3>
+        <test></test>
+            </div>
+</script>
+
+
 
 
     <script src="main.js"></script>
