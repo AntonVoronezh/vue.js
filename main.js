@@ -27,23 +27,23 @@ new Vue({
 
 new Vue({
     el: '#app9',
-    
+
     methods: {
         handleOuter(event) {
             console.log('outer');
-            
+
         },
         handleInner(event) {
             console.log('inner');
-            
+
         },
         handleClick(event) {
             console.log('click');
-            
+
         },
-        handleKey(event){
+        handleKey(event) {
             console.log(event.target.value);
-            
+
         }
     }
 });
@@ -52,27 +52,27 @@ new Vue({
     el: '#app10',
     data: {
         title: 'Hello 10',
-       
+
     },
     methods: {
         reverseTitle(title) {
             return title.split('').reverse().join('');
-            
+
         },
-        setupTitle(){
+        setupTitle() {
             // this.title = this.newTitle;
             this.title = 'vaaaaaaa';
             this.title = this.newTitle;
         }
     },
     computed: {
-        reversedTitle(){
+        reversedTitle() {
             return this.title.split('').reverse().join('');
         },
-        newTitle(){
+        newTitle() {
             return 'new Title';
         },
-        newTitleGetSet:{
+        newTitleGetSet: {
             get() {
                 return 'new Title Get & Set'
             },
@@ -92,10 +92,10 @@ new Vue({
     data: {
         title: 'Hello 11',
         status: ''
-       
+
     },
     methods: {
-        setupTitle(){
+        setupTitle() {
             this.title = 'this.newTitle';
         }
     },
@@ -104,7 +104,7 @@ new Vue({
             this.status = 'changed';
         }
     }
-    
+
 
 });
 
@@ -116,14 +116,14 @@ new Vue({
         activeClass: 'active',
         errorClass: 'error',
         changed: false
-       
+
     },
     methods: {
-        setupTitle(){
+        setupTitle() {
             this.changed = !this.changed;
         }
     }
-    
+
 
 });
 
@@ -139,7 +139,7 @@ new Vue({
         },
         fontNewColor: 'blue',
         fontNewSize: '25px'
-       
+
     }
 
 });
@@ -150,16 +150,41 @@ new Vue({
     data: {
 
         show: true,
-       
-        },
-        methods: {
 
-            change() {
-                this.show = !this.show;
-            }
+    },
+    methods: {
 
+        change() {
+            this.show = !this.show;
         }
-       
+
+    }
+
+
+
+});
+
+
+new Vue({
+    el: '#app15',
+    data: {
+
+        arr: ['one', 'two', 'three'],
+
+        obj: {
+            prop1: 'val1',
+            prop2: 'val2'
+        },
+
+        arrObj: [
+            { name: 'aa', sal: 100 },
+            { name: 'bb', sal: 200 },
+            { name: 'cc', sal: 300 }
+        ]
+
+    },
+
+
 
 
 });
