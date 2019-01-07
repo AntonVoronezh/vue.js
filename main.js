@@ -203,3 +203,31 @@ setTimeout(() => {
     vueModel.$data.title = 'ssssssssss';
 
 }, 2000);
+
+
+
+
+
+Vue.component('hello', {
+
+    template: '<h3 @click="handle">{{title}}</h3>',
+
+    data() {
+        return {
+            title: 'title 17'
+        }
+    },
+    methods: {
+
+        handle() {
+            this.title = 'new tit 17'
+        }
+
+
+    }
+
+});
+
+const vueModel2 = new Vue();
+
+vueModel2.$mount('#app17');
