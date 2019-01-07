@@ -126,3 +126,21 @@ new Vue({
     
 
 });
+
+
+new Vue({
+    el: '#app13',
+    data: {
+        title: 'Hello 13',
+        stylessss: {
+            color: 'white',
+            backgroundColor: 'red',
+            fontSize: '20px'
+        },
+        fontNewColor: 'blue',
+        fontNewSize: '25px'
+       
+    }
+    
+
+});
