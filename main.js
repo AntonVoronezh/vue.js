@@ -206,7 +206,7 @@ setTimeout(() => {
 
 
 
-
+// 17
 
 Vue.component('hello', {
 
@@ -231,3 +231,41 @@ Vue.component('hello', {
 const vueModel2 = new Vue();
 
 vueModel2.$mount('#app17');
+
+
+
+
+
+// 18
+
+Vue.component('test', {
+
+    template: '<span>inner component</span>'
+
+});
+
+
+
+Vue.component('hello18', {
+
+    template: '#hello18',
+
+    data() {
+        return {
+            title: 'title 18'
+        }
+    },
+    methods: {
+
+        handle() {
+            this.title = 'new tit 18'
+        }
+
+
+    }
+
+});
+
+const vueModel3 = new Vue();
+
+vueModel3.$mount('#app18');
