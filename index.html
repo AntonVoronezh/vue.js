@@ -116,8 +116,8 @@
 
     <!-- 14 -->
     <div id="app14">
-        <!-- <div v-if="show">Заголовок</div> -->
-        <div v-show="show">Заголовок</div>
+        <div v-if="show">Заголовок</div>
+        <!-- <div v-show="show">Заголовок</div> -->
         <div v-else>fffffffffffff</div>
         <button @click="change">изменить</button>
     </div>
@@ -183,9 +183,21 @@
        <h3 @click="handle"><i>{{title}}</i></h3>
 
     </div>
-   
-
 </script>
+
+    <!-- 19 -->
+    <div id="app19">
+        <hello19> </hello19>
+    </div>
+
+    <script type="text/x-template" id="hello19">
+            <div>
+                
+               <h3 @click="handle"><i>{{title}}</i></h3>
+        <test></test>
+            </div>
+</script>
+
 
 
 

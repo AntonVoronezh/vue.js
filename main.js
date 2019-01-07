@@ -269,3 +269,39 @@ Vue.component('hello18', {
 const vueModel3 = new Vue();
 
 vueModel3.$mount('#app18');
+
+
+
+// 19
+
+Vue.component('hello19', {
+
+    template: '#hello19',
+
+    data() {
+        return {
+            title: 'title 19'
+        }
+    },
+    methods: {
+
+        handle() {
+            this.title = 'new tit 19'
+        }
+    },
+    components: {
+        test:{
+            template: '<span>inner component 19</span>'
+        }
+    },
+    mounted(){
+        console.log('компонент примонтрован');
+        
+    }
+
+
+});
+
+const vueModel4 = new Vue();
+
+vueModel4.$mount('#app19');
