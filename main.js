@@ -184,7 +184,22 @@ new Vue({
 
     },
 
+});
 
 
+const vueModel = new Vue({
+    data: {
+
+        title: 'ddddddddddd'
+
+    }
 
 });
+
+vueModel.$mount('#app16');
+
+setTimeout(() => {
+
+    vueModel.$data.title = 'ssssssssss';
+
+}, 2000);
