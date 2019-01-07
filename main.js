@@ -141,6 +141,25 @@ new Vue({
         fontNewSize: '25px'
        
     }
-    
+
+});
+
+
+new Vue({
+    el: '#app14',
+    data: {
+
+        show: true,
+       
+        },
+        methods: {
+
+            change() {
+                this.show = !this.show;
+            }
+
+        }
+       
+
 
 });
