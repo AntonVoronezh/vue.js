@@ -90,7 +90,7 @@ new Vue({
 new Vue({
     el: '#app11',
     data: {
-        title: 'Hello 10',
+        title: 'Hello 11',
         status: ''
        
     },
@@ -102,6 +102,25 @@ new Vue({
     watch: {
         title(value) {
             this.status = 'changed';
+        }
+    }
+    
+
+});
+
+
+new Vue({
+    el: '#app12',
+    data: {
+        title: 'Hello 12',
+        activeClass: 'active',
+        errorClass: 'error',
+        changed: false
+       
+    },
+    methods: {
+        setupTitle(){
+            this.changed = !this.changed;
         }
     }
     

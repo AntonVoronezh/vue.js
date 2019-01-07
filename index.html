@@ -9,7 +9,11 @@
 
     <style>
         [v-cloak] {
-        display: none;
+        display: none;}
+
+        .active {
+            background-color: #ccc;
+        }
     }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -61,7 +65,7 @@
 
 
     <!-- 10 -->
-<hr>
+    <hr>
     <div id="app10">
         <div>{{title}}</div>
         <div>{{3 > 2}}</div>
@@ -73,14 +77,31 @@
         <button @click="setupTitle">setupTitle</button>
 
     </div>
-<hr>
-<!-- 11 -->
-<div id="app11">
+    <hr>
+
+
+
+    <!-- 11 -->
+    <div id="app11">
         <div>{{title}}</div>
         <div>{{status}}</div>
         <button @click="setupTitle">setupTitle</button>
 
     </div>
+<hr>
+
+
+
+    <!-- 12 -->
+    <div id="app12">
+        <!-- <div :class="changed ? 'active' : ''">{{title}}</div> -->
+        <!-- <div class="static" :class="{active:changed}">{{title}}</div> -->
+        <!-- <div class="static" :class="['activeClass', 'errorClass']">{{title}}</div> -->
+        <div class="static" :class="[{active:changed}, 'errorClass']">{{title}}</div>
+        <button @click="setupTitle">вывести</button>
+
+    </div>
+
 
 
     <script src="main.js"></script>
