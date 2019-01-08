@@ -218,7 +218,22 @@
     <hr>
 
 
+    <!-- 21-->
+    <div id="app20">
+        <hello20 :key="name" v-for="name in names" :some="name">
+            <p>ddd</p>
+            <i>sssssssss</i>
+        </hello20>
+    </div>
 
+    <script type="text/x-template" id="hello20">
+            <div>
+                <slot></slot>
+               <h3 ><s>{{some}}</s></h3>
+        
+            </div>
+</script>
+    <hr>
 
 
     <script src="main.js"></script>
