@@ -330,3 +330,52 @@ const vueModel5 = new Vue({
 });
 
 vueModel5.$mount('#app20');
+
+
+// 21
+
+Vue.component('child', {
+
+    template: '#child',
+
+    methods: {
+        handleClick() {
+            this.$emit('clickEmited', 'new title 21')
+        }
+    }
+
+});
+
+Vue.component('hello21', {
+
+    props: ['some'],
+
+    template: '#hello21',
+
+    data() {
+        return {
+            title: 'title 21'
+        }
+    },
+
+    methods: {
+        
+        changeTitle(newTitle) {
+            this.title = newTitle;
+        }
+
+    }
+
+});
+
+const vueModel6 = new Vue({
+
+    data() {
+        return {
+            names: ['aaa', 'bbb', 'ccc']
+        }
+    }
+
+});
+
+vueModel6.$mount('#app21');

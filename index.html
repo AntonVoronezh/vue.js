@@ -219,19 +219,23 @@
 
 
     <!-- 21-->
-    <div id="app20">
-        <hello20 :key="name" v-for="name in names" :some="name">
+    <div id="app21">
+        <hello21 :key="name" v-for="name in names" :some="name">
             <p>ddd</p>
             <i>sssssssss</i>
-        </hello20>
+        </hello21>
     </div>
 
-    <script type="text/x-template" id="hello20">
+    <script type="text/x-template" id="hello21">
             <div>
-                <slot></slot>
-               <h3 ><s>{{some}}</s></h3>
-        
+                
+               <h3 ><s>{{title}}</s></h3>
+        <child @clickEmited="changeTitle"></child>
             </div>
+</script>
+
+<script type="text/x-template" id="child">
+<button @click="handleClick">оповестить</button>
 </script>
     <hr>
 
