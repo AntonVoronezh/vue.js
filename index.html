@@ -14,7 +14,7 @@
         .active {
             background-color: #ccc;
         }
-    }
+    
     </style>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
@@ -169,7 +169,7 @@
         <hello> </hello>
         <hello></hello>
     </div>
-
+    <hr>
 
     <!-- 18 -->
     <div id="app18">
@@ -184,6 +184,9 @@
 
     </div>
 </script>
+    <hr>
+
+
 
     <!-- 19 -->
     <div id="app19">
@@ -197,6 +200,23 @@
         <test></test>
             </div>
 </script>
+    <hr>
+
+
+    <!-- 20 -->
+    <div id="app20">
+        <hello20 :key="name" v-for="name in names" :some="name"> </hello20>
+    </div>
+
+    <script type="text/x-template" id="hello20">
+            <div>
+                
+               <h3 ><s>{{some}}</s></h3>
+        
+            </div>
+</script>
+    <hr>
+
 
 
 

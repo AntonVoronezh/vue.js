@@ -290,13 +290,13 @@ Vue.component('hello19', {
         }
     },
     components: {
-        test:{
+        test: {
             template: '<span>inner component 19</span>'
         }
     },
-    mounted(){
+    mounted() {
         console.log('компонент примонтрован');
-        
+
     }
 
 
@@ -305,3 +305,28 @@ Vue.component('hello19', {
 const vueModel4 = new Vue();
 
 vueModel4.$mount('#app19');
+
+
+// 20
+
+Vue.component('hello20', {
+
+    props: ['some'],
+
+    template: '#hello20',
+
+
+
+});
+
+const vueModel5 = new Vue({
+
+    data() {
+        return {
+            names: ['aaa', 'bbb', 'ccc']
+        }
+    }
+
+});
+
+vueModel5.$mount('#app20');
